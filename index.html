@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Githubrank</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
 
@@ -15,23 +17,29 @@
 </head>
 
 <body>
+    <h1 class="d-flex justify-content-center p-3">Top 7 github repos</h1>
+    <div class="container d-flex justify-content-center p-3">
+        <select class="custom-select m-2" id="lang-selector">
+            <option>JavaScript</option>
+            <option>Java</option>
+            <option>Python</option>
+            <option>PHP</option>
+            <option>Ruby</option>
+            <option value="Cpp">C++</option>
+            <option value="Csharp">C#</option>
+            <option>C</option>
+            <option>Go</option>
+            <option>Elixir</option>
+            <option>Swift</option>
+        </select>
+
+        <button class="btn btn-outline-danger m-2" onclick="runChart()">Create Chart</button>
+    </div>
 
 
-    <select>
-        <option>JavaScript</option>
-        <option>Java</option>
-        <option>Python</option>
-        <option>PHP</option>
-        <option>Ruby</option>
-        <option>Cpp</option>
-        <option>C</option>
-        <option>Go</option>
-        <option>Elixir</option>
-        <option>Swift</option>
-    </select>
-    <button onclick="warmia()">check</button>
-
-    <div id="chart-area"><canvas id="myChart"></canvas></div>
+    <div id="chart-area" class="container d-flex justify-content-center p-5">
+        <canvas id="myChart"></canvas>
+    </div>
 
 
 

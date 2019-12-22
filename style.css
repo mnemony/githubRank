@@ -11,11 +11,16 @@ body {
 
 }
 
+#lang-selector {
+    width: 135px;
+}
 
+@media only screen and (max-width: 767px) {
+    body {
+        height: 138vh;
+    }
 
-
-#chart-area {
-    height: 30%;
-    width: 40%;
-    display: inline-flex;
+    h1 {
+        font-size: medium;
+    }
 }

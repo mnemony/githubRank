@@ -1,4 +1,6 @@
-function warmia() {
+//Main functrion
+
+function runChart() {
 
     document.getElementById('chart-area').innerHTML = "";
     const selector = document.querySelector('select').value;
@@ -12,10 +14,11 @@ function warmia() {
     request.onload = function () {
         // Begin accessing JSON data here
 
-        var data = JSON.parse(this.response)
+        let data = JSON.parse(this.response)
 
-        var dateeert = data['items'];
+        let dateeert = data['items'];
 
+        //Collect data from API
         if (request.status >= 200 && request.status < 400) {
             dateeert.forEach(movie => {
                 names.push(movie.name)
@@ -31,25 +34,23 @@ function warmia() {
         canvasGen.appendChild(task);
 
 
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var chart = new Chart(ctx, {
-            // The type of chart we want to create
+        let ctx = document.getElementById('myChart').getContext('2d');
+        let chart = new Chart(ctx, {
             type: 'bar',
 
 
-            // The data for our dataset
+            // The data for dataset
             data: {
                 labels: [names[0], names[1], names[2], names[3], names[4], names[5], names[6]],
                 datasets: [{
-                    label: 'My First dataset',
+                    label: `${selector} top repos`,
                     backgroundColor: 'rgb(255, 99, 132)',
                     borderColor: 'rgb(255, 99, 132)',
                     data: [stars[0], stars[1], stars[2], stars[3], stars[4], stars[5], stars[6]]
                 }]
             },
 
-            // Configuration options go here
-            options: {}
+
         });
 
     }
