@@ -3,7 +3,7 @@
 function runChart() {
 
     document.getElementById('chart-area').innerHTML = "";
-    const selector = document.querySelector('select').value;
+    let selector = document.querySelector('select').value;
     const request = new XMLHttpRequest();
     const canvasGen = document.getElementById('chart-area');
 
@@ -32,6 +32,14 @@ function runChart() {
         const task = document.createElement('canvas');
         task.id = 'myChart';
         canvasGen.appendChild(task);
+
+        if (selector === 'Cpp') {
+            selector = 'C++'
+        }
+
+        if (selector === 'Csharp') {
+            selector = 'C#'
+        }
 
 
         let ctx = document.getElementById('myChart').getContext('2d');
