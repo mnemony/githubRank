@@ -20,9 +20,9 @@ function runChart() {
 
         //Collect data from API
         if (request.status >= 200 && request.status < 400) {
-            dateeert.forEach(movie => {
-                names.push(movie.name)
-                stars.push(movie.stargazers_count)
+            dateeert.forEach(rep => {
+                names.push(rep.name)
+                stars.push(rep.stargazers_count)
 
             })
         } else {
