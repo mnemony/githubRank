@@ -13,10 +13,27 @@ body {
     width: 135px;
 }
 
+.warnstate {
+    max-width: 285px;
+    text-align: center;
+    margin: auto;
+    padding: 4px;
+    background-color: coral;
+    border-radius: 7px;
+    color: gray;
+    display: none;
+}
+
 @media only screen and (max-width: 767px) {
 
 
     h1 {
         font-size: medium;
+    }
+}
+
+@media (max-width: 520px) {
+    .warnstate {
+        display: block;
     }
 }
